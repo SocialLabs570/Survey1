@@ -40,6 +40,18 @@ st.text_input('Ваши имя, фамилия и номер группы', key=
 
 st.subheader('Оцените Ваши качества')
 
+st.markdown(
+    """
+    <style>
+    .stSlider {
+        width: 300px; /* Ширина для смартфонов */
+        margin-bottom: 50px;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 for i in range(0, qlen):
     st.slider(qualities[i], min_value=0, max_value=10, key=qkeys[i])
 
@@ -112,3 +124,4 @@ if savetoDB:
     plt.ylim(0, 10)
     plt.axis('off')
     st.pyplot(fig)
+
