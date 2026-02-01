@@ -57,9 +57,8 @@ for i in range(0, qlen):
 
 st.write('----------------------------------------------')
 
-st.subheader('В каком виде спорта Вы имеете наибольший успех?')
-
-st.markdown(f"И выполняется <b><i><mark>какое-либо</mark></i></b> из условий: <b>регулярные занятия, призовые места на соревнованиях, спортивный разряд</b>...", unsafe_allow_html=True)
+st.markdown(f"<h2>Укажите <mark>один</mark> вид спорта, в котором Вы имеете наибольший успех</h2>", unsafe_allow_html=True)
+st.markdown(f"И выполнено <b><i><mark>какое-либо</mark></i></b> из условий: <b>систематические тренировки для достижения результата, призовые места на соревнованиях, спортивный разряд</b>...", unsafe_allow_html=True)
 
 for i in range(0, slen): st.checkbox(k[i], key=c[i])
 
@@ -124,6 +123,7 @@ if savetoDB:
     plt.ylim(0, 10)
     plt.axis('off')
     st.pyplot(fig)
+
 
 
 
