@@ -36,7 +36,7 @@ st.title('Спортивная анкета')
 
 st.header('Опрос')
 
-st.text_input('Ваши имя, фамилия и номер группы', key='person')
+st.text_input('Укажите Ваше имя — чтобы было ясно: мужчина или женщина', key='person')
 
 st.subheader('Оцените Ваши качества')
 
@@ -123,6 +123,7 @@ if savetoDB:
     plt.ylim(0, 10)
     plt.axis('off')
     st.pyplot(fig)
+
 
 
 
